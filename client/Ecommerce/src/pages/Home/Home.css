@@ -1,0 +1,148 @@
+/* Global setting */
+* {
+  box-sizing: border-box;
+}
+
+/* Main card wrapper */
+.card-wraper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px 5px 150px;
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+  /* margin-right:50px; */
+}
+
+/* Individual card */
+.cards {
+  flex: 1; /* This ensures the cards take equal space on wider screens */
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+  margin: 30px 5px;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: calc(33.333% - 60px); /* Assuming three cards in a row, minus margins */
+}
+
+/* Card image */
+.cards .card-image img {
+  background-color:#cce7d0;
+  
+  width: 100%; /* Making image take the full width of the card */
+  height: 250px;
+  margin: 5px 0;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.02);
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s; 
+}
+.cards .card-image img:hover {
+  background-color:#e8bc40;
+
+}
+/* .cards:hover {
+  /* transform: scale(1.2); */
+  
+
+/* Card title and rating */
+.card-title, .card-rating {
+  text-align: center;
+}
+
+/* Card price and its child elements */
+.card-price {
+  display: flex;
+  /* justify-content: space-between; */
+  margin: 15px 120px;
+  text-align: center;
+  align-items: center;
+  font-weight: lighter;
+}
+
+/* .card-price img {
+  background-color: #cce7d0;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.card-price img:hover {
+  background-color: green;
+  transition: 0.5s ease;
+} */
+
+.button-section{
+
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.button-section .addtocart{
+
+  background-color:#e8bc40;
+  padding: 10px 20px;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  font-size: large;
+  color:white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+/* .button-section .addtofavorite{
+
+  background-color:gray;
+  width:80px;
+  
+  padding: 10px 20px;
+  border: 1px solid #cce7d0;
+  border-radius: 10px;
+  font-size: large;
+  color:white;
+
+} */
+
+
+.button-section .view{
+
+  background-color:gray;
+  /* width:80px; */
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: 1px solid #cce7d0;
+  border-radius: 10px;
+  font-size: large;
+  color:white;
+
+}
+
+
+.noproduct-text {
+  margin: 50px 500px;
+  color: gray;
+}
+
+/* Tablet devices (typically screens 768px and up but less than 1024px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .cards {
+    max-width: calc(50% - 60px); /* Two cards in a row for tablet */
+  }
+}
+
+/* Mobile devices (typically screens below 768px) */
+@media (max-width: 480px) {
+  .card-wraper {
+    margin: 10px 20px; /* Reduced side margins for mobile */
+  }
+  
+  .cards {
+    max-width: 100%; /* One card per row on mobile */
+    margin: 15px 0; /* Reduce vertical margin for mobile */
+  }
+
+  .noproduct-text {
+    margin: 50px 20px; /* Adjusted for mobile */
+    text-align: center; /* Centering the no product text */
+  }
+}
